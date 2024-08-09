@@ -40,8 +40,19 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'job_application',
-    'compressor',
+    'tailwind',
+    'theme',
+    
 ]
+# 'compressor',
+
+TAILWIND_APP_NAME = 'theme'
+
+INTERNAL_IPS = [
+    "127.0.0.1",
+]
+
+NPM_BIN_PATH = "C:/Program Files/nodejs/npm.cmd"
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -126,9 +137,16 @@ STATIC_URL = 'static/'
 
 # DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# COMPRESS_ROOT = BASE_DIR / 'static'
+# COMPRESS_ROOT = BASE_DIR / 'static/'
 
 # COMPRESS_ENABLED = True
+
+
+# COMPRESS_EXCLUDE_LIST = (
+#     'admin/css/base.css',
+#     'admin/css/forms.css',
+#     'admin/css/widgets.css',
+# )
 
 # STATICFILES_FINDERS = ('compressor.finders.CompressorFinder',)
 
@@ -143,3 +161,4 @@ EMAIL_HOST_PASSWORD = os.getenv("EMAIL_PASS")
 
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
