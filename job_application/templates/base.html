@@ -9,6 +9,34 @@
     {% tailwind_css %}
   </head>
   <body class="bg-slate-300">
+    <header class="bg-slate-900">
+      <nav class="flex justify-between items-center w-[92%] mx-auto">
+        <div>
+          <img
+            class="w-16 rounded-3xl"
+            src="data:image/png;base64,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"
+          />
+        </div>
+
+        <div class="">
+          <ul class="flex items-center gap-4 text-white text-2xl">
+            <li>
+              <a
+                class="p-2 bg-slate-950 rounded-xl hover:bg-slate-800"
+                href="/about"
+                >About US</a
+              >
+            </li>
+            <li>
+              <a class="p-2 bg-slate-950 rounded-xl hover:bg-slate-800" href="/"
+                >Form</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 bg-slate-900"></div>
     {% block content %} {% endblock %}
   </body>
 </html>
